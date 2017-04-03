@@ -2,7 +2,19 @@ import android.media.MediaPlayer;
 import android.content.res.AssetFileDescriptor;
 import android.content.Context;
 import android.app.Activity;
-
+/*
+import android.os.Looper;//for setup() if needed
+import android.os.Bundle;
+import android.view.Gravity;
+import android.view.Window;
+import android.widget.RelativeLayout;
+import android.app.Activity;
+//import com.google.ads.*;//un comment if you use other from ads
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.MobileAds;
+*/
 
 MediaPlayer mp;
 Context context; 
@@ -68,6 +80,7 @@ void settings(){
   fullScreen();
 }
 void setup(){
+frameRate(35);
 orientation(LANDSCAPE);
 x = width;
 y = height;
@@ -109,7 +122,7 @@ up = false;
 
 
 scroll = x;
-scrollspeed = round(768 * 0.0015) * overallspeed;
+scrollspeed = round(768 * 0.003) * overallspeed;
 try{
 background = loadImage("background-1430105_960_720.png");
 background.resize(x, y); //Resizes the image to be the size of the window
@@ -134,8 +147,8 @@ actualg = 0;
 actualb = 0;
 time = millis();
 
-upvalue = round((0.0065 * y)  * overallspeed);
-rectspeed = round((0.015 * x)  * overallspeed);
+upvalue = round((0.0105 * y)  * overallspeed);
+rectspeed = round((0.020 * x)  * overallspeed);
 circlesize = round(0.04 * y);
 
 halfcircle = round(circlesize/2.2);
@@ -621,4 +634,27 @@ void startsong(){
       reversed += workwith.charAt(count);
     }
     return reversed;
-  }        
+  }       
+  /*
+  @Override
+public void onCreate(Bundle savedInstanceState) {
+   super.onCreate(savedInstanceState);
+Window window = getActivity().getWindow();
+ RelativeLayout adsLayout = new RelativeLayout(this.getActivity());
+ RelativeLayout.LayoutParams lp2 = new RelativeLayout.LayoutParams(
+    RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.MATCH_PARENT);//Fill is deprecated
+  
+AdView adView = new AdView(this.getActivity());
+adView.setAdSize(AdSize.BANNER);
+adView.setAdUnitId("ca-app-pub-1170651226186353/3944341426");
+  adsLayout.addView(adView);
+    AdRequest newAdReq = new AdRequest.Builder()
+ 
+    .build();
+    
+    adView.loadAd(newAdReq);
+    window.addContentView(adsLayout,lp2);
+ 
+ 
+};
+*/
