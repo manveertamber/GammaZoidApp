@@ -2,19 +2,7 @@ import android.media.MediaPlayer;
 import android.content.res.AssetFileDescriptor;
 import android.content.Context;
 import android.app.Activity;
-/*
-import android.os.Looper;//for setup() if needed
-import android.os.Bundle;
-import android.view.Gravity;
-import android.view.Window;
-import android.widget.RelativeLayout;
-import android.app.Activity;
-//import com.google.ads.*;//un comment if you use other from ads
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.AdSize;
-import com.google.android.gms.ads.MobileAds;
-*/
+
 
 MediaPlayer mp;
 Context context; 
@@ -635,26 +623,3 @@ void startsong(){
     }
     return reversed;
   }       
-  /*
-  @Override
-public void onCreate(Bundle savedInstanceState) {
-   super.onCreate(savedInstanceState);
-Window window = getActivity().getWindow();
- RelativeLayout adsLayout = new RelativeLayout(this.getActivity());
- RelativeLayout.LayoutParams lp2 = new RelativeLayout.LayoutParams(
-    RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.MATCH_PARENT);//Fill is deprecated
-  
-AdView adView = new AdView(this.getActivity());
-adView.setAdSize(AdSize.BANNER);
-adView.setAdUnitId("ca-app-pub-1170651226186353/3944341426");
-  adsLayout.addView(adView);
-    AdRequest newAdReq = new AdRequest.Builder()
- 
-    .build();
-    
-    adView.loadAd(newAdReq);
-    window.addContentView(adsLayout,lp2);
- 
- 
-};
-*/
