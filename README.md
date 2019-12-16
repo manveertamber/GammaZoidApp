@@ -1,1 +1,2 @@
-![Alt text](/screenshot.png?raw=true)
+![ScreenShot](https://github.com/manveertamber/GammaZoidApp/blob/master/screenshot.PNG)
+
